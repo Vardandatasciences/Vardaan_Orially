@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Query Assistant</title>
+    <link rel="stylesheet" href="/static/css/chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body onload="displayWelcomeMessage()">
+    <!-- Sidebar Title -->
+    <div class="sidebar">
+        <img src="/static/images/v-logo.png" alt="Company Logo" class="logo">
+        <h2>Vardaan Data Sciences</h2>
+    </div>
+    
+    <!-- Greeting Section -->
+    <div class="greeting-container">
+        <h1 class="greeting">Hello, {{ username }}</h1>
+    </div>
+
+    <!-- Fullscreen Chat Section -->
+    <div class="chat-section">
+        <div id="chatbot" class="chat-box"></div>
+        <div class="input-section">
+            <input type="text" id="questionInput" placeholder="Ask Vardaan..." onkeydown="handleKeyPress(event)">
+            <i class="fa fa-microphone mic-button" onclick="startListening()"></i>
+            <button class="send-button" onclick="askQuestion()">&#9658;</button>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+    <script>
+        const language = "{{ language }}";  // Set language from Python template
+        const welcomeMessage = "{{ welcome_message }}";  // Translated welcome message
+
+        // Debugging: Log the welcome message to confirm it's in the correct language
+        console.log("Welcome Message:", welcomeMessage);
+
+        // Check if Enter is pressed and call askQuestion if so
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                askQuestion();
+            }
+        }
+    </script>
+    
+</body>
+</html>

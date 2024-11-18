@@ -1,0 +1,269 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Greeting */
+.greeting-container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.greeting {
+    font-size: 2rem;
+    background: linear-gradient(90deg, #3a8dff, #d53a9d);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Chat Section */
+.chat-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 150px);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Chat Box */
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    margin: 10px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Chat Messages */
+.chat-message {
+    display: flex;
+    align-items: flex-start;
+    max-width: 75%;
+}
+
+.user-message {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.assistant-message {
+    align-self: flex-start;
+}
+
+/* Profile Images */
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 60%;
+}
+
+.user-message .profile-image {
+    margin-left: 10px;
+}
+
+.assistant-message .profile-image {
+    margin-right: 10px;
+}
+
+/* Message Bubble */
+.message-bubble {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.user-message .message-bubble {
+    background-color: #3a8dff;
+    color: #ffffff;
+    border-bottom-right-radius: 0;
+}
+
+.assistant-message .message-bubble {
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border-bottom-left-radius: 0;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    color: #ffffff;
+    outline: none;
+    font-size: 1em;
+}
+
+input[type="text"]::placeholder {
+    color: #b0b0b0;
+}
+
+.send-button {
+    background: none;
+    border: none;
+    color: #3a8dff;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.send-button:hover {
+    color: #6da4ff;
+}
+
+
+/* Sidebar styling */
+/* Sidebar styling */
+.sidebar {
+    width: 170px; /* Adjust width as needed */
+    height: 100vh; /* Full height */
+    background: linear-gradient(180deg, #333333, #1c1c1c, #333333); /* Gradient dark-gray to black */
+    color: #ffffff; /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Keep sidebar fixed */
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Logo styling */
+.sidebar .logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    margin-bottom: 10px;
+    object-fit: contain; /* Keeps logo in proportion */
+}
+
+/* Gradient text styling */
+.sidebar h2 {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(45deg, #ffffff, #e0e0e0); /* Gradient color for text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.mic-button {
+    padding: 10px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.mic-button:hover {
+    background-color: #555;
+}
+
+.mic-button i {
+    font-size: 5rem;
+}
+
+
+/* 
+.input-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+} */
+
+#questionInput {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.mic-button {
+    color: #007bff;
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block;  /* Ensures the icon is visible */
+}
+
+.mic-button:hover {
+    color: #218838;
+}
+
+
+.send-button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.send-button:hover {
+    color: #218838;
+}
+.voice-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 18px;
+    color: #007bff;
+    margin-top: 7px;
+}
+
+.voice-button:hover {
+    color: #218838;
+}
